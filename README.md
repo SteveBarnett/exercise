@@ -146,6 +146,8 @@ The layout and code must:
   layout)
 - Be well documented/commented
 
+[The layout, via GitHub Pages](https://stevebarnett.github.io/exercise/)
+
 If you're itching to do more, consider:
 
 - CSS methodology
