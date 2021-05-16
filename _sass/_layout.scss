@@ -1,0 +1,77 @@
+img {
+  border-width: 0;
+  vertical-align: middle;
+  -ms-interpolation-mode: bicubic;
+  max-width: 100%;
+  height: auto;
+}
+
+main {
+  padding: $gap-s $gap-m;
+}
+
+// TODO: #1 remove extra stuff from demo
+// footer {
+//   padding-left: 1em;
+//   padding-right: 1em;
+// }
+
+.header-main {
+  background-color: $dark-grey;
+  color: $white; // contrast 9.29 ✅ https://contrast-ratio.com/#ffffff-on-%23404758
+  padding: $gap-s $gap-m;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sidebar {
+  background-color: $green;
+  color: $white; // contrast 7.96 ✅ https://contrast-ratio.com/#%23ffffff-on-%23415459
+  padding: $gap-s $gap-m;
+}
+
+.form-search {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: end;
+
+  &__input {
+    font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir,
+      segoe ui, helvetica neue, helvetica, Ubuntu, roboto, noto, arial,
+      sans-serif;
+    font-size: 1rem;
+    line-height: 2;
+    border: 1px solid $white;
+    margin: 0;
+  }
+
+  &__button {
+    background-color: $white;
+    border: none;
+    padding: $gap-xs $gap-s;
+  }
+
+  &__input,
+  &__button {
+    &:focus {
+      outline: 2px solid $yellow;
+      outline-offset: 1px;
+      z-index: 1;
+    }
+  }
+}
+
+// Layout for bigger screens
+
+@media (min-width: 60em) {
+  body {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+  }
+
+  .header-main {
+    grid-column: 1 / -1;
+  }
+}

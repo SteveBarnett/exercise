@@ -1,0 +1,76 @@
+body {
+  font-family: system-ui, avenir next, avenir, segoe ui, helvetica neue,
+    helvetica, Ubuntu, roboto, noto, arial, sans-serif;
+  line-height: 1.25;
+  font-size: 125%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+
+  &:target {
+    &:before {
+      content: "→";
+      margin-right: 0.25em;
+    }
+  }
+}
+
+strong,
+p,
+li {
+  &:target {
+    &:before {
+      content: "→";
+      margin-right: 0.25em;
+    }
+  }
+}
+
+// TODO: #1 remove extra stuff from demo
+// hierarchy
+
+// h2 {
+//   text-transform: uppercase;
+// }
+
+// h3 {
+//   font-weight: bold;
+// }
+
+// h4 {
+//   text-transform: uppercase;
+// }
+
+// Set a typographic scale, but skip for this demo
+
+// http://typecast.com/blog/a-more-modern-scale-for-web-typography
+
+a {
+  &:link,
+  &:visited {
+    color: $red;
+  }
+}
+
+a {
+  &:hover,
+  &:active {
+    color: lighten($red, 20%);
+  }
+
+  &:focus {
+    outline: solid 3px $red;
+  }
+}
+
+.header-main {
+  h2 {
+    margin-bottom: 0;
+  }
+}
